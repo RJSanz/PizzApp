@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Titulo de la página web -->
+    <title>Corregir Pedido</title>
+    <!-- Hoja de estilos generada por el programador (Raul)-->
+    <link rel="stylesheet" href="../../css/stile.css">
+    <!-- Hoja de estilos generada de forma automatica por bootstrap -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuentes creadas para la pagina web descargadas desde bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Estilos generados para la página web -->
+    <link href="../../css/business-casual.min.css" rel="stylesheet">
+</head>
+
+  <body>
+    <!--etiqueta para la escritura de un header con sus clases de estilo, utiliza la hoja de estilos creados para la página web-->
+    <h1 class="site-heading text-center text-white d-none d-lg-block"> 
+      <span class="site-heading-upper text-primary mb-3">Bienvenidos a</span>
+      <span class="site-heading-lower">PIZZAPP</span>
+    </h1>
+
+   <!-- Creacion y configuracion de la barra de navegacion que utiliza los estilos de hoja predeterminados y los estilos configurados por bootstrap, permite que la barra de navegación sea responsiva y señale la posicion actual del usuario durante la navegacion -->
+    <div id="nav-placeholder"></div>
+    
+    <!-- contenedor que permite por medio de tablas, hacer llevar a cabo las eleccion de ingredentes que se desean quitar del pedido, hay casillas que estan marcadas e ingredientes seleccionados, de acuerdo al pedido que habia hecho el usuario anteriormente-->
+    <div class="contenedor-form">
+            <h2>Corregir pedido</h2>
+  <table border="0">
+        <thead>
+            <tr>
+                <th><p></p>Elija Ingrediente(s)</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+    <h4 class="diminutas">Para agregar mas elementos marque las casillas, para eliminarlos desmarquelos</h4>
+    <table border="0">
+                <tbody>
+            <tr>
+                <td>Tipo de masa</td>
+                <td>
+                  <select name="masa">
+                    <option>****</option>
+                  </select>
+                </td>
+                <td>
+                  <span>$ 000.00</span></td>
+            </tr>
+            <tr>
+                <td>Tipo de queso</td>
+                <td>
+                  <select name="queso">
+                    <option>****</option>
+                  </select>
+                </td>
+                <td>
+                  <span>$ 000.00</span></td>
+            </tr>
+            <tr>
+                <td>Ingrediente 1</td>
+                <td>
+                  <select name="ingrediente1">
+                    <option>****</option>
+                  </select>
+                </td>
+                <td>
+                  <span>$ 000.00</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+     <table border="0">
+        <tbody>
+            <tr>
+                <td><p></p><input type="checkbox" name="segundo" value="ON" /><span> Ingrediente 2</span></td>
+                <td>
+                  <select name="ingrediente2">
+                    <option>****</option>
+                  </select></td>
+                <td><span>$ 000.00</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+     <table border="0">
+        <tbody>
+            <tr>
+                <td><p></p><input type="checkbox" name="segundo" value="ON" /><span> Ingrediente 3</span></td>
+                <td>
+                  <select name="ingrediente3">
+                    <option>****</option>
+                  </select></td>
+                <td><span>$ 000.00</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <input type="submit" value="Agregar">
+     <input type="submit" value="Quitar">
+     <table border="0">
+        <thead>
+            <tr>
+                <th><p></p>Elija Complemento(s)</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+     <h4 class="diminutas">Para agregar mas elementos marque las casillas, para eliminarlos desmarquelos</h4>
+    <p></p>
+     <table border="0">
+        <tbody>
+            <tr>
+                <td><p></p><input type="checkbox" name="complementos" value="ON" /><span> Complemento 1</span></td>
+                <td>
+                  <select name="complemento">
+                    <option>****</option>
+                  </select></td>
+                <td><span>$ 000.00</span></td>
+            </tr>
+            <tr>
+                <td><p></p><input type="checkbox" name="complementos" value="ON" /><span> Complemento 2</span></td>
+                <td>
+                  <select name="complemento">
+                    <option>****</option>
+                  </select></td>
+                <td><span>$ 000.00</span></td>
+            </tr>
+            <tr>
+                <td><p></p><input type="checkbox" name="complementos" value="ON" /><span> Complemento 3</span></td>
+                <td>
+                  <select name="complemento">
+                    <option>****</option>
+                  </select></td>
+                <td><span>$ 000.00</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <input type="submit" value="Agregar">
+    <input type="submit" value="Quitar">
+    <p></p>
+     <table border="0">
+        <tbody>
+            <tr>
+                <td>Subtotal</td>
+                <td>
+                  <span>$000.00</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <input type="submit" value="Completar Correccion">
+    </div>
+   <!-- Pie de página de la aplicacion web-->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; Pizzapp 2018</p>
+      </div>
+    </footer>
+    <!-- JAvaScript generado por bootstrap -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/jquery-3.1.1.min.js"></script>    
+    <!--Javascript generado por el programador (Raul) -->
+    <script src="../js/main.js"></script>
+    <script>
+      $(function() {
+        $("#nav-placeholder").load("navU.php");
+      });
+    </script>
+</body>
+</html>

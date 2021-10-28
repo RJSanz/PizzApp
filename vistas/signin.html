@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <!--titulo de la página web-->
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- Hoja de estilos generada por bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuentes creadas para la página web -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Estilos creados para la página web-->
+    <link href="../css/business-casual.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!--etiqueta para la escritura de un header con sus clases de estilo, utiliza la hoja de estilos creados para la página web-->
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Bienvenidos a</span>
+      <span class="site-heading-lower">PIZZAPP</span>
+    </h1>
+
+    <!-- Creacion y configuracion de la barra de navegacion que utiliza los estilos de hoja predeterminados y los estilos configurados por bootstrap, permite que la barra de navegación sea responsiva y señale la posicion actual del usuario durante la navegacion -->
+   <div id="nav-placeholder"></div>
+    <!-- Seccion que almacena dos contenedores -->
+    <div class="contenedor-form">
+        <!-- El primer contenedor almacena un formulario que valida el inicio de sesion del usuario dentro de la página web, valida por medio de formulario.php -->
+        <div class="formulario">
+          <div class="toggle">
+            <span> Crear Cuenta</span>
+        </div>
+        
+            <h2>Iniciar Sesión</h2>
+            <form method="post" action="../controlador/formulario.php">
+                <input type="text" placeholder="Usuario" name="Usuario" required>
+                <input type="password" placeholder="Contraseña" name="Contrasena" required>
+                <input type="submit" name="Login" value="Iniciar Sesión">
+            </form>
+        </div>
+         <!-- El segundo contenedor almacena un formulario permite que el usuario no registrado, ingrese sus datos para que pueda ser dado de alta como usuario en la pagina web, valida por medio de formulario.php -->
+        <div class="formulario">
+          <div class="toggle">
+            <span> Iniciar Sesion</span>
+        </div>
+        
+            <h2>Crea tu Cuenta</h2>
+            <form method="POST" action="../controlador/formulario.php">
+                <input type="email" name="Correo" placeholder="Correo Electronico" required>
+                
+                <input type="text" name="Nombre" placeholder="Nombre" required>
+
+                <input type="text" name="Usuario" placeholder="Usuario" required>
+                
+                <input type="password" name="Contraseña" placeholder="Contraseña" required>
+                
+                <input type="password" name="Confirmar" placeholder="Confirmar Contraseña" required>
+                
+                <input type="text" name="Direccion" placeholder="Direccion" required>
+                
+                <input type="text" name="Fecha" placeholder="Fecha de nacimiento" required>
+                
+                <input type="text" name="Telefono" placeholder="Telefono" required>
+                
+                <input type="submit" name="Crear" value="Registrarse">
+            </form>
+        </div>
+
+
+        <div class="reset-password">
+            <a href="#">Resetear Contraseña</a>
+        </div>
+    </div>
+
+    <!-- Pie de Página de la aplicacion web -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; Pizzapp 2018</p>
+      </div>
+    </footer>
+    <!-- JAvaScript generado por bootstrap -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- JAvaScript generado por el programador (Raul) -->
+    <script src="../js/jquery-3.1.1.min.js"></script>    
+    <script src="../js/main.js"></script>
+    <script>
+      $(function() {
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
+</body>
+</html>
