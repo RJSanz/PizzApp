@@ -33,6 +33,46 @@ function logIn(Usuario, Contrasena){
     });
 }
 
-function signIn(){
-	
+function signIn(Correo, Nombre, Usuario, Contraseña, Confirmar, Direccion, Fecha, Telefono){
+    var correo = Correo.value;
+    var nombre = Nombre.value;
+    var usuari = Usuario.value;
+    var contra = Contraseña.value;
+    var segcon = Confirmar.value;
+    var direcc = Direccion.value;
+    var fechan = Fecha.value;
+    var telefo = Telefono.value;
+    var dataString ={
+                "correo" : correo,
+                "nombre" : nombre,
+                "usuari" : usuari,
+                "contra" : contra,
+                "segcon" : segcon,
+                "direcc" : direcc,
+                "fechan" : fechan,
+                "telefo" : telefo
+    };
+
+    if(contra==segcon){
+        $.ajax({
+
+            type: "POST",
+            url: "../controlador/signin.php",
+            data: dataString,
+            success: function(response) {
+
+                if (response == 0) {
+                    alert("No se ha podido crear Usuario");
+                }
+
+                if (response == 1) {
+                    alert("Se ha agregado a " + usuari + "\n Puedes Iniciar Sesion tranquilamente");
+                }
+            }
+
+        });
+    }
+    else{
+        alert("Las contraseñas no concuerdan entre si\nVuelve a ingresarlas");
+    }
 }

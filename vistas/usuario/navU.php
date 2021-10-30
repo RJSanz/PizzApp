@@ -1,7 +1,7 @@
 <?php
       session_start();
       include '../../controlador/formulario.php';
-      $usuario=$_SESSION["Usuario"];
+      $usuario=$_SESSION["usuario"];
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">

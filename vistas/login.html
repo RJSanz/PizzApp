@@ -43,7 +43,7 @@
         </div>
         
             <h2>Crea tu Cuenta</h2>
-            <form method="POST" action="../controlador/formulario.php">
+            <form action="">
                 <input type="email" name="Correo" placeholder="Correo Electronico" required>
                 
                 <input type="text" name="Nombre" placeholder="Nombre" required>
@@ -60,7 +60,7 @@
                 
                 <input type="text" name="Telefono" placeholder="Telefono" required>
                 
-                <input type="submit" name="Crear" value="Registrarse">
+                <input type="button" name="Signin" value="Registrarse" onclick="signIn(Correo, Nombre, Usuario, Contraseña, Confirmar, Direccion, Fecha, Telefono)">
             </form>
         </div>
         <!-- El segundo contenedor almacena un formulario que valida el inicio de sesion del usuario dentro de la página web, valida por medio de formulario.php -->
