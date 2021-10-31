@@ -34,6 +34,8 @@ function logIn(Usuario, Contrasena){
 }
 
 function signIn(Correo, Nombre, Usuario, Contraseña, Confirmar, Direccion, Fecha, Telefono){
+    
+    alert("estoy en signin")
     var correo = Correo.value;
     var nombre = Nombre.value;
     var usuari = Usuario.value;
@@ -52,8 +54,9 @@ function signIn(Correo, Nombre, Usuario, Contraseña, Confirmar, Direccion, Fech
                 "fechan" : fechan,
                 "telefo" : telefo
     };
-
+    alert("voy a entrar a iefels")
     if(contra==segcon){
+        alert("voy a entrar a ajax");
         $.ajax({
 
             type: "POST",
