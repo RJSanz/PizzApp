@@ -54,9 +54,7 @@ function signIn(Correo, Nombre, Usuario, Contraseña, Confirmar, Direccion, Fech
                 "fechan" : fechan,
                 "telefo" : telefo
     };
-    alert("voy a entrar a iefels")
     if(contra==segcon){
-        alert("voy a entrar a ajax");
         $.ajax({
 
             type: "POST",

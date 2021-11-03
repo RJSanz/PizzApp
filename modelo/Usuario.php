@@ -39,27 +39,27 @@ class Usuario{
 		$this->telefono = $dato;
 	}
 
-	function getCorreo($dato){
+	function getCorreo(){
 		return $this->correo;
 	}
 
-	function getNombre($dato){
+	function getNombre(){
 		return $this->nombre;
 	}
 
-	function getUsuario($dato){
+	function getUsuario(){
 		return $this->usuario;
 	}
 
-	function getContrasena($dato){
+	function getContrasena(){
 		return $this->password;
 	}
 
-	function getDireccion($dato){
+	function getDireccion(){
 		return $this->direc;
 	}
 
-	function getFecha($dato){
+	function getFecha(){
 		return $this->fecha;
 	}
 

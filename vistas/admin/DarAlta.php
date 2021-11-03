@@ -10,6 +10,8 @@
     <!-- Hoja de estilo generada por Bootstrap -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <script src="../../controlador/altaMenu.js"></script>
+
     <!-- Fuentes creadas para la pagina web descargadas desde bootstrap -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
@@ -58,46 +60,27 @@
                 <input type="submit" name="Crear" value="Registrarse">
             </form>
         </div>
-        <!-- El segundo contenedor almacena un formulario que valida el inicio de sesion del usuario dentro de la página web, valida por medio de formulario.php -->
+        
         <div class="formulario">
           <div class="toggle">
             <span> Eliminar </span>
-        </div>
+          </div>
         
-            <h2>Agrega Ingredientes Disponibles</h2>
-            <table border="0">
-        <tbody>
-            <tr>
-                <td>Tipo de Ingrediente</td>
-                <td>
-                  <select name="tipo">
-                    <option>****</option>
-                  </select>
-                </td>
-              </tr>
-          </tbody>
-      </table>
-      <p></p>
-      <input type="text" placeholder="Nombre" required>
-      <input type="text" placeholder="Precio" required>
-      <p></p>
-       <table border="0">
-        <tbody>
-            <tr>
-                <td>Disponibilidad</td>
-                <td>
-                  <select name="tipo">
-                    <option>Si</option>
-                    <option>No</option>
-                  </select>
-                </td>
-              </tr>
-          </tbody>
-      </table>
-      <p></p>
-    <input type="submit" value="Finalizar">
+          <h2>Agrega Especialidad Disponible</h2>
+      
+          <form action=>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre de la especialidad" required>
+            <textarea id= "ingredientes" name="ingredientes" rows="5" cols="38" placeholder="Ingredientes"></textarea>
+            <select name="tipo" id="tipo">
+              <option value="" disabled selected>Tipo de Menu</option>
+              <option  value="Especialidad" type="text" name="tipo">Especialidad</option>
+              <option value="Complemento"  type="text" name="tipo">Compplemento</option>
+            </select>
+            <input type="number" id="precio" name="precio" placeholder="Precio" required>
+          </form>
+          <input type="button" name="save" value="Guardar" onclick="GuardarMenu(nombre, ingredientes, tipo, precio)">
         </div>
-    </div>
+      </div>
     
 
    

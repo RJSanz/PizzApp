@@ -51,6 +51,33 @@ class Conexion{
 
 	}
 
+	function agregarMenu($consulta){
+		$datos = null;
+		$resultado = null;
+		if ($consulta == null){
+			throw new Exception("Error en archivo conexion ---> La consulta esta vacia");
+		}
+		if ($this->conexion == null){
+			throw new Exception("Error en la conexion con la base de datos");
+		}
+		try{
+			$datos = mysqli_query($this->conexion, $consulta);
+		}catch(Exception $e){
+			throw $e;
+		}
+		if ($datos) {
+			$resultado = true;
+		}
+		else{
+			$resultado = false;
+		}
+		return $resultado;
+	}
+
+	function consultarMenu(){
+
+	}
+
 
 }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2021 a las 07:15:37
+-- Tiempo de generación: 03-11-2021 a las 22:57:17
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -20,6 +20,35 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `pizzapp`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `menu`
+--
+
+CREATE TABLE `menu` (
+  `Id_menu` int(11) NOT NULL,
+  `nombre` varchar(25) NOT NULL,
+  `precio` float NOT NULL,
+  `ingredientes` varchar(250) NOT NULL,
+  `tipo` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `menu`
+--
+
+INSERT INTO `menu` (`Id_menu`, `nombre`, `precio`, `ingredientes`, `tipo`) VALUES
+(1, 'Carnes Frias', 120, 'jamon, tocino, queso gouda, carne de res, albondigas', 'Especialidad'),
+(2, 'Quesos', 110, 'queso gouda, queso manchego, queso mozzarella, queso de dinamarca', 'Especialidad'),
+(3, 'Pastor', 130, 'Queso Gouda, carne al pastor, aceitunas, masa arabe', 'Especialidad'),
+(4, 'Especialidad PIZZAPP', 150, 'Queso manchego, queso gouda, aceitunas, carne enchilada, carne al pastor, chorizo', 'Especialidad'),
+(5, 'Papas al horno', 80, 'papa, queso gouda, chorizo, jamon', 'Complemento'),
+(6, 'Papas fritas', 30, 'papa, catsup, queso derretido, valentina, chipotle', 'Complemento'),
+(7, 'Dedos de queso', 20, 'queso crema, pan frito', 'Complemento'),
+(8, 'Spaguetti', 70, 'pasta de fideo, jitomate, albondigas, pastrami, queso gouda', 'Especialidad'),
+(9, 'Vino', 120, 'vino tinto', 'Complemento');
 
 -- --------------------------------------------------------
 
@@ -57,6 +86,12 @@ INSERT INTO `usuario` (`ID_usuario`, `Usuario`, `Nombre`, `Correo`, `FecNac`, `T
 --
 
 --
+-- Indices de la tabla `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`Id_menu`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -65,6 +100,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `Id_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
