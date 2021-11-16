@@ -1,6 +1,5 @@
 <?php
       session_start();
-      include '../../controlador/formulario.php';
       $usuario=$_SESSION["usuario"];
 ?>
 

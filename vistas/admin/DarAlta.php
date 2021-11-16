@@ -57,24 +57,27 @@
         </thead>
         <tbody>
         <?php
+        $i = 0;
         $conexion = mysqli_connect('localhost', 'root', '', 'pizzapp');
 
         $sql = "SELECT * FROM menu ";
         $result = mysqli_query($conexion, $sql);
 
         while ($mostrar = mysqli_fetch_array($result)) {
+          $i = $i+1;
         ?>
-         <tr>
+         <tr id="fila<?php echo $i; ?>">
           
             <td scope="row"><?php echo $mostrar['Id_menu'] ?></td>
             <td><?php echo $mostrar['nombre'] ?></td>
             <td><?php echo $mostrar['precio'] ?></td>
             <td><?php echo $mostrar['ingredientes'] ?></td>
             <td><?php echo $mostrar['tipo'] ?></td>
-            <td><button type="button" class="btn btn-danger deletebtn" data-toggle="modal" data-target="#eliminar">Eliminar</button></td>
+            <td><a onclick="borrarMenu(<?php echo $mostrar['Id_menu']?>)" class="btn btn-danger">Eliminar</a> </td>
+            <!--<td><button type="button" class="btn btn-danger deletebtn" data-toggle="modal" data-target="#eliminar">Eliminar</button></td>-->
 
-            <a href="#" data-href="eliminar.php?Id_menu=
-            <?php echo $mostrar['Id_menu']; ?>" data-toggle="modal" data-target="#eliminar">
+            <!--<a href="#" data-href="eliminar.php?Id_menu=
+            <?php echo $mostrar['Id_menu']; ?>" data-toggle="modal" data-target="#eliminar">-->
                 </a>
         <!--<svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                   <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />

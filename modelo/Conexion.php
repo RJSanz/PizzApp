@@ -74,8 +74,28 @@ class Conexion{
 		return $resultado;
 	}
 
-	function consultarMenu(){
-
+	function borraMenu($consulta){
+		$datos = null;
+		$resultado = null;
+		if ($consulta == null){
+			throw new Exception("Error en archivo conexion ---> La consulta esta vacia");
+		}
+		if ($this->conexion == null){
+			throw new Exception("Error en la conexion con la base de datos");
+		}
+		try{
+			$datos = mysqli_query($this->conexion, $consulta) or trigger_error("Query Failed! SQL: $consulta - Error: ".mysqli_error($this->conexion), E_USER_ERROR);
+			
+		}catch(Exception $e){
+			throw $e;
+		}
+		if ($datos) {
+			$resultado = true;
+		}
+		else{
+			$resultado = false;
+		}
+		return $resultado;
 	}
 
 
