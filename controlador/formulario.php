@@ -1,7 +1,9 @@
-
 <?php
+//require_once('http://' . $_SERVER['HTTP_HOST'] . '/modelo/Propiedades.php');
+ require_once($_SERVER['DOCUMENT_ROOT'].'/PizzApp/modelo/Propiedades.php');
 	//Codigo php que conecta con la base de datos creada para los usuarios
-	$con=mysqli_connect('localhost','root','','pizzapp') or die ('Error en la conexion servidor');
+        $prop = new Propiedades();
+	$con=mysqli_connect($prop->getHost(), $prop->getUser(), $prop->getPass(), $prop->getDB()) or die ('Error en la conexion servidor');
 	//condicional para determinar si el usuario se ha registrado, usando un comando php para recuperar los datos ingresados por el usuario y con un comando SQL para registrar los datos del usuario en la tabla correspondiente
 	if(isset($_POST['Crear'])){
 		$confcon=$_POST["Confirmar"];

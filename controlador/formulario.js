@@ -34,6 +34,8 @@ function logIn(Usuario, Contrasena){
 }
 
 function signIn(Correo, Nombre, Usuario, Contraseña, Confirmar, Direccion, Fecha, Telefono){
+    
+    alert("estoy en signin")
     var correo = Correo.value;
     var nombre = Nombre.value;
     var usuari = Usuario.value;
